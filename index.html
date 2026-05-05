@@ -1,35 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Awesome Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trails and Tails | Dog Walking & Pet Sitting</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Colors & Vibe */
+        :root {
+            --forest-green: #2E7D32;
+            --earth-brown: #5D4037;
+            --sunny-yellow: #FFC107;
+            --warm-cream: #FAFAF5;
+            --soft-white: #FFFFFF;
+            --text-dark: #333333;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--warm-cream);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--earth-brown);
+            padding: 15px 20px;
             text-align: center;
-            background-color: #f4f4f9;
-            color: #333;
-            margin-top: 50px;
         }
-        h1 {
-            color: #0056b3;
+        nav a {
+            color: var(--soft-white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #0056b3;
-            color: white;
+        nav a:hover {
+            color: var(--sunny-yellow);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--forest-green);
+            color: var(--soft-white);
+            text-align: center;
+            padding: 60px 20px;
+            /* This is where you will eventually put a real background image */
+            background-image: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), url('https://placehold.co/1600x600/2E7D32/FFFFFF?text=PUT+YOUR+MAIN+TRAIL+PHOTO+HERE');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: var(--sunny-yellow);
+            color: var(--earth-brown);
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-family: 'Fredoka', sans-serif;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn:hover {
+            background-color: #ffdb4d;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section (What you called Curriculum) */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .services h2 {
+            color: var(--forest-green);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background-color: var(--soft-white);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .service-card h3 {
+            color: var(--earth-brown);
+        }
+
+        /* Testimonials (Member Stories) */
+        .stories {
+            background-color: var(--earth-brown);
+            color: var(--soft-white);
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .stories h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .story-card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            font-style: italic;
+        }
+        .story-author {
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            color: var(--sunny-yellow);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .final-cta h2 {
+            color: var(--forest-green);
+            font-size: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--forest-green);
+            color: var(--soft-white);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to My Site</h1>
-    <p>This is my first website. I built this with AI, saved it to GitHub, and put it on Cloudflare!</p>
-    
-    <button onclick="alert('It works!')">Click Me</button>
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">What We Do</a>
+        <a href="#stories">Happy Tails</a>
+        <a href="#book">Book Now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Trails and Tails</h1>
+        <p>Adventure-ready dog walking, trail running, and cozy pet sitting.</p>
+        <a href="#book" class="btn">Book Your Doggie In For a Run!</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>What We Offer</h2>
+        <div class="service-grid">
+            
+            <!-- Service 1 -->
+            <div class="service-card">
+                <!-- Replace the link below with your own image link/file -->
+                <img src="https://placehold.co/600x400/8D6E63/FFFFFF?text=Cartoon+Dog+on+Trail" alt="Trail Running">
+                <h3>Trail Running</h3>
+                <p>High-energy trail runs for dogs who need to burn off that extra zoomie energy. We tackle the mud so you don't have to!</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <!-- Replace the link below with your own image link/file -->
+                <img src="https://placehold.co/600x400/8D6E63/FFFFFF?text=Cartoon+Dog+Walking" alt="Leisurely Walks">
+                <h3>Leisurely Walks</h3>
+                <p>A relaxed sniff-filled stroll through the neighborhood or local park. Perfect for older dogs or casual explorers.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <!-- Replace the link below with your own image link/file -->
+                <img src="https://placehold.co/600x400/8D6E63/FFFFFF?text=Cartoon+Cat+Resting" alt="Pet Sitting">
+                <h3>Cozy Pet Sitting</h3>
+                <p>Going out of town? Your furry family member gets to stay in their own home, surrounded by love and familiar smells.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="stories" id="stories">
+        <h2>Member Stories</h2>
+        
+        <div class="story-card">
+            <p>"Since using Trails and Tails, my border collie is actually tired when I get home from work. Absolute lifesavers!"</p>
+            <div class="story-author">- Sarah & Buster</div>
+        </div>
+
+        <div class="story-card">
+            <p>"The updates and photos I get while they are out on the trails are the highlight of my day. Highly recommend!"</p>
+            <div class="story-author">- Mark & Luna</div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="book">
+        <h2>Ready to hit the trails?</h2>
+        <p>Spaces fill up fast. Book your pup's next adventure today!</p>
+        <!-- In the future, you can change this "#" to a link to a booking form -->
+        <a href="#" class="btn">Book Your Doggie In For a Run!</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Trails and Tails. All rights reserved. Designed with love for pets.</p>
+    </footer>
 
 </body>
 </html>
