@@ -48,20 +48,20 @@
       color: var(--sunny-yellow);
     }
 
-    /* Hero Section - UPDATED: Made much taller to show the whole photo */
+       /* Hero Section - UPDATED: Shows the ENTIRE image without cropping */
     .hero {
       color: var(--soft-white);
       text-align: center;
-      padding: 40px 20px; /* Reduced side padding since the box is bigger now */
+      padding: 80px 20px; /* Adds space above/below text so it doesn't overlap photo edges */
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-image.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
       
-      /* This forces the hero to be at least 80% of the screen height */
-      min-height: 80vh; 
+      /* The Magic Fix: 100% auto stops the cropping! */
+      background-size: 100% auto; 
+      background-position: center top;
+      background-repeat: no-repeat; /* Prevents it from tiling if the screen is really wide */
+      background-attachment: scroll; /* Turned off parallax, as it fights with the new sizing */
       
-      /* This perfectly centers your text vertically inside the new tall box */
+      /* Centers the text vertically inside the new dynamic height */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -76,6 +76,7 @@
       font-size: 1.2rem;
       margin-bottom: 25px;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
     }
 
     .btn {
