@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding & Mobile Scaling -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO -->
     <title>Trails 'n' Tails | Dog Walking & Pet Sitting</title>
     <meta name="description" content="Adventure-ready dog walking, trail running, and cozy pet sitting with Trails 'n' Tails. Book your pup's next adventure today!">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -36,7 +33,6 @@
       font-family: 'Fredoka', sans-serif;
     }
 
-    /* Navigation */
     nav {
       background-color: var(--earth-brown);
       padding: 15px 20px;
@@ -52,29 +48,27 @@
       color: var(--sunny-yellow);
     }
 
-    /* Hero Section - UPDATED FOR BACKGROUND IMAGE */
     .hero {
       color: var(--soft-white);
       text-align: center;
-      padding: 100px 20px; /* Made taller to show off the image */
-      /* The gradient goes first, then the image URL behind it */
-      background-image: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), url('hero-image.jpg');
+      padding: 100px 20px;
+      /* Updated filename here. Assuming it's a .jpg! */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-image.jpg');
       background-size: cover;
       background-position: center;
-      background-attachment: fixed; /* Optional: creates a cool parallax scrolling effect */
+      background-attachment: fixed;
     }
     .hero h1 {
-      font-size: 3.5rem; /* Made slightly bigger for impact */
+      font-size: 3.5rem;
       margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Helps text pop against the photo */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 25px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
-    /* Buttons */
     .btn {
       background-color: var(--sunny-yellow);
       color: var(--earth-brown);
@@ -94,7 +88,6 @@
       transform: translateY(-2px);
     }
 
-    /* Services Section */
     .services {
       text-align: center;
       padding: 50px 20px;
@@ -130,7 +123,6 @@
       color: var(--earth-brown);
     }
 
-    /* About Section */
     .about {
       background-color: #ffffff;
       padding: 60px 20px;
@@ -174,7 +166,6 @@
       content: '🐾 ';
     }
 
-    /* Testimonials */
     .stories {
       background-color: var(--earth-brown);
       color: var(--soft-white);
@@ -200,7 +191,6 @@
       color: var(--sunny-yellow);
     }
 
-    /* Final CTA */
     .final-cta {
       text-align: center;
       padding: 60px 20px;
@@ -226,7 +216,6 @@
       text-decoration: underline;
     }
 
-    /* Footer */
     footer {
       background-color: var(--forest-green);
       color: var(--soft-white);
@@ -235,10 +224,6 @@
       font-size: 0.9rem;
     }
 
-
-    /* =========================================
-       MOBILE RESPONSIVE ADJUSTMENTS
-       ========================================= */
     @media (max-width: 768px) {
       nav a {
         margin: 5px 10px;
@@ -246,7 +231,6 @@
       }
       .hero {
         padding: 60px 15px;
-        /* Turns off the parallax effect on mobile, as it can cause glitches on some phones */
         background-attachment: scroll; 
       }
       .hero h1 {
@@ -285,7 +269,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
         <a href="#">Home</a>
         <a href="#services">What We Do</a>
@@ -294,14 +277,12 @@
         <a href="#book">Book Now</a>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <h1>Trails 'n' Tails</h1>
         <p>Adventure-ready dog walking, trail running, and cozy pet sitting.</p>
         <a href="mailto:ashworth530@hotmail.com?subject=Booking%20Inquiry%20from%20Website" class="btn">Book Your Doggie In For a Run!</a>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <h2>What We Offer</h2>
         <div class="service-grid">
@@ -323,13 +304,12 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <h2>Who's Walking Your Pup?</h2>
         <div class="about-content">
             <img src="about.me.jpg" alt="Founder of Trails n Tails" class="about-img">
             <div class="about-text">
-                <p>Hi, I'm <strong>[Your Name]</strong>! As a lifelong dog lover and outdoor enthusiast, I started Trails 'n' Tails to give pups the exercise, adventure, and care they truly deserve.</p>
+                <p>Hi, I'm <strong>Sam</strong>! As a lifelong dog lover and outdoor enthusiast, I started Trails 'n' Tails to give pups the exercise, adventure, and care they truly deserve.</p>
                 <p>I know how hard it is to leave your best friend behind, which is why I treat every dog like my own. You'll get real-time photo updates so you can see them living their best life.</p>
                 <ul>
                     <li>Fully Insured & Bonded</li>
@@ -340,20 +320,20 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="stories" id="stories">
         <h2>Member Stories</h2>
+        
         <div class="story-card">
-            <p>"Since using Trails 'n' Tails, my border collie is actually tired when I get home from work. Absolute lifesavers!"</p>
-            <div class="story-author">- Sarah & Buster</div>
+            <p>"Sam is the best House Sitter / Dog & Cat Carer that we have ever had! We highly recommend Sam for his professionalism and excellent care of our dog, Daisy and our cat, Fox."</p>
+            <div class="story-author">- Rachel, Daisy & Fox</div>
         </div>
+
         <div class="story-card">
-            <p>"The updates and photos I get while they are out on the trails are the highlight of my day. Highly recommend!"</p>
-            <div class="story-author">- Mark & Luna</div>
+            <p>"Sam housesat for 4 nights and took great care of our senior cats and dog. Our dog got out on some incredible adventures with him - she was so pleased to join him on his runs. We received some photos of the pets while away and all looked pleased and were happy when we returned. Terrific!"</p>
+            <div class="story-author">- Kristyn</div>
         </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="final-cta" id="book">
         <h2>Ready to hit the trails?</h2>
         <div class="contact-info">
@@ -364,7 +344,6 @@
         <a href="mailto:ashworth530@hotmail.com?subject=Booking%20Inquiry%20from%20Website" class="btn">Book Your Doggie In For a Run!</a>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Trails 'n' Tails. All rights reserved. Designed with love for pets.</p>
     </footer>
