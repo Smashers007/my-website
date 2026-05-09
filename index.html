@@ -48,15 +48,24 @@
       color: var(--sunny-yellow);
     }
 
+    /* Hero Section - UPDATED: Made much taller to show the whole photo */
     .hero {
       color: var(--soft-white);
       text-align: center;
-      padding: 100px 20px;
-      /* Updated filename here. Assuming it's a .jpg! */
+      padding: 40px 20px; /* Reduced side padding since the box is bigger now */
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-image.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      
+      /* This forces the hero to be at least 80% of the screen height */
+      min-height: 80vh; 
+      
+      /* This perfectly centers your text vertically inside the new tall box */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .hero h1 {
       font-size: 3.5rem;
@@ -112,9 +121,10 @@
       width: 300px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
+    /* UPDATED: Increased height from 200px to 280px */
     .service-card img {
       width: 100%;
-      height: 200px;
+      height: 280px;
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 15px;
@@ -229,9 +239,11 @@
         margin: 5px 10px;
         font-size: 0.95rem;
       }
+      /* UPDATED: Adjusted hero for mobile screens */
       .hero {
-        padding: 60px 15px;
+        padding: 40px 15px;
         background-attachment: scroll; 
+        min-height: 60vh; /* Slightly shorter on phones so they don't have to scroll forever to see services */
       }
       .hero h1 {
         font-size: 2.2rem;
