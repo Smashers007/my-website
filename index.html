@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding & Mobile Scaling (Crucial for phones) -->
+    <!-- Character encoding & Mobile Scaling -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO: What shows up in the Google search results -->
+    <!-- SEO -->
     <title>Trails 'n' Tails | Dog Walking & Pet Sitting</title>
     <meta name="description" content="Adventure-ready dog walking, trail running, and cozy pet sitting with Trails 'n' Tails. Book your pup's next adventure today!">
     
-    <!-- Loads your custom fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -84,7 +84,7 @@
       text-decoration: none;
       font-weight: 600;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      display: inline-block; /* Helps with mobile button spacing */
+      display: inline-block;
     }
     .btn:hover {
       background-color: #ffdb4d;
@@ -113,7 +113,7 @@
       background-color: var(--soft-white);
       border-radius: 15px;
       padding: 20px;
-      width: 300px; /* Desktop width */
+      width: 300px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .service-card img {
@@ -125,6 +125,52 @@
     }
     .service-card h3 {
       color: var(--earth-brown);
+    }
+
+    /* =========================================
+       NEW: ABOUT SECTION
+       ========================================= */
+    .about {
+      background-color: #ffffff; /* Slightly different than cream to make it pop */
+      padding: 60px 20px;
+    }
+    .about h2 {
+      text-align: center;
+      color: var(--forest-green);
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .about-img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%; /* Makes the image a circle */
+      border: 5px solid var(--sunny-yellow);
+      flex-shrink: 0; /* Prevents image from squishing on small screens */
+    }
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .about-text ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+    .about-text ul li {
+      font-weight: bold;
+      color: var(--earth-brown);
+      margin-bottom: 5px;
+    }
+    .about-text ul li::before {
+      content: '🐾 '; /* Adds a paw print before list items */
     }
 
     /* Testimonials */
@@ -162,6 +208,23 @@
       color: var(--forest-green);
       font-size: 2rem;
     }
+    .final-cta p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    /* NEW: Styling for contact links */
+    .contact-info {
+      margin-bottom: 30px;
+    }
+    .contact-info a {
+      color: var(--earth-brown);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      color: var(--forest-green);
+      text-decoration: underline;
+    }
 
     /* Footer */
     footer {
@@ -177,14 +240,10 @@
        MOBILE RESPONSIVE ADJUSTMENTS
        ========================================= */
     @media (max-width: 768px) {
-      
-      /* Shrink nav spacing so it wraps nicely on small screens */
       nav a {
         margin: 5px 10px;
         font-size: 0.95rem;
       }
-
-      /* Make Hero text smaller so it doesn't overwhelm the screen */
       .hero {
         padding: 40px 15px;
       }
@@ -194,22 +253,31 @@
       .hero p {
         font-size: 1rem;
       }
-
-      /* Force service cards to be nearly full-width on mobile */
       .service-card {
         width: 90%; 
-        max-width: 400px; /* Prevents it from getting too wide on larger tablets */
+        max-width: 400px; 
+      }
+      
+      /* NEW: Stack the About section on mobile */
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-img {
+        width: 200px;
+        height: 200px;
+      }
+      .about-text ul {
+        display: inline-block;
+        text-align: left;
       }
 
-      /* Shrink CTA section */
       .final-cta {
         padding: 40px 15px;
       }
       .final-cta h2 {
         font-size: 1.6rem;
       }
-
-      /* Shrink Testimonial headers */
       .stories h2 {
         font-size: 2rem;
       }
@@ -222,6 +290,7 @@
     <nav>
         <a href="#">Home</a>
         <a href="#services">What We Do</a>
+        <a href="#about">About</a>
         <a href="#stories">Happy Tails</a>
         <a href="#book">Book Now</a>
     </nav>
@@ -237,22 +306,16 @@
     <section class="services" id="services">
         <h2>What We Offer</h2>
         <div class="service-grid">
-
-            <!-- Service 1 -->
             <div class="service-card">
                 <img src="leisurely-walks.jpg" alt="Leisurely Walks">
                 <h3>Trail Running</h3>
                 <p>High-energy trail runs for dogs who need to burn off that extra zoomie energy. We tackle the mud so you don't have to!</p>
             </div>
-
-            <!-- Service 2 -->
             <div class="service-card">
                 <img src="trail-running.jpg" alt="Trail Running">
                 <h3>Leisurely Walks</h3>
                 <p>A relaxed sniff-filled stroll through the neighborhood or local park. Perfect for older dogs or casual explorers.</p>
             </div>
-
-            <!-- Service 3 -->
             <div class="service-card">
                 <img src="sadie.jpg" alt="Sadie">
                 <h3>Cozy Pet Sitting</h3>
@@ -261,15 +324,31 @@
         </div>
     </section>
 
+    <!-- NEW: About Section -->
+    <section class="about" id="about">
+        <h2>Who's Walking Your Pup?</h2>
+        <div class="about-content">
+            <!-- Replace 'owner.jpg' with a photo of you! -->
+            <img src="owner.jpg" alt="Founder of Trails n Tails" class="about-img">
+            <div class="about-text">
+                <p>Hi, I'm <strong>[Your Name]</strong>! As a lifelong dog lover and outdoor enthusiast, I started Trails 'n' Tails to give pups the exercise, adventure, and care they truly deserve.</p>
+                <p>I know how hard it is to leave your best friend behind, which is why I treat every dog like my own. You'll get real-time photo updates so you can see them living their best life.</p>
+                <ul>
+                    <li>Fully Insured & Bonded</li>
+                    <li>Pet First-Aid & CPR Certified</li>
+                    <li>GPS Tracked Walks & Runs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="stories" id="stories">
         <h2>Member Stories</h2>
-
         <div class="story-card">
             <p>"Since using Trails 'n' Tails, my border collie is actually tired when I get home from work. Absolute lifesavers!"</p>
             <div class="story-author">- Sarah & Buster</div>
         </div>
-
         <div class="story-card">
             <p>"The updates and photos I get while they are out on the trails are the highlight of my day. Highly recommend!"</p>
             <div class="story-author">- Mark & Luna</div>
@@ -279,6 +358,13 @@
     <!-- Final CTA -->
     <section class="final-cta" id="book">
         <h2>Ready to hit the trails?</h2>
+        
+        <!-- NEW: Contact Info & Service Area -->
+        <div class="contact-info">
+            <p><strong>Serving:</strong> [Your City/Town Name] & Surrounding Areas</p>
+            <p><strong>Call/Text:</strong> <a href="tel:5551234567">(555) 123-4567</a> | <strong>Email:</strong> <a href="mailto:hello@trailsntails.com">hello@trailsntails.com</a></p>
+        </div>
+        
         <p>Spaces fill up fast. Book your pup's next adventure today!</p>
         <a href="#" class="btn">Book Your Doggie In For a Run!</a>
     </section>
