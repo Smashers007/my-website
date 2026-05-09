@@ -9,7 +9,7 @@
     <title>Trails 'n' Tails | Dog Walking & Pet Sitting</title>
     <meta name="description" content="Adventure-ready dog walking, trail running, and cozy pet sitting with Trails 'n' Tails. Book your pup's next adventure today!">
     
-    <!-- Loads your custom fonts so the CSS actually works -->
+    <!-- Loads your custom fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -84,6 +84,7 @@
       text-decoration: none;
       font-weight: 600;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: inline-block; /* Helps with mobile button spacing */
     }
     .btn:hover {
       background-color: #ffdb4d;
@@ -112,7 +113,7 @@
       background-color: var(--soft-white);
       border-radius: 15px;
       padding: 20px;
-      width: 300px;
+      width: 300px; /* Desktop width */
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .service-card img {
@@ -169,6 +170,49 @@
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
+    }
+
+
+    /* =========================================
+       MOBILE RESPONSIVE ADJUSTMENTS
+       ========================================= */
+    @media (max-width: 768px) {
+      
+      /* Shrink nav spacing so it wraps nicely on small screens */
+      nav a {
+        margin: 5px 10px;
+        font-size: 0.95rem;
+      }
+
+      /* Make Hero text smaller so it doesn't overwhelm the screen */
+      .hero {
+        padding: 40px 15px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+
+      /* Force service cards to be nearly full-width on mobile */
+      .service-card {
+        width: 90%; 
+        max-width: 400px; /* Prevents it from getting too wide on larger tablets */
+      }
+
+      /* Shrink CTA section */
+      .final-cta {
+        padding: 40px 15px;
+      }
+      .final-cta h2 {
+        font-size: 1.6rem;
+      }
+
+      /* Shrink Testimonial headers */
+      .stories h2 {
+        font-size: 2rem;
+      }
     }
     </style>
 </head>
