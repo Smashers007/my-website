@@ -35,20 +35,22 @@
 
     nav {
       background-color: var(--earth-brown);
-      padding: 15px 20px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       flex-wrap: wrap;
     }
     .nav-logo {
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       object-fit: contain;
       background-color: var(--warm-cream);
       flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 3px solid var(--sunny-yellow);
     }
     .nav-links {
       display: flex;
@@ -67,20 +69,15 @@
       color: var(--sunny-yellow);
     }
 
-      /* Hero Section - UPDATED: Shows the ENTIRE image without cropping */
     .hero {
       color: var(--soft-white);
       text-align: center;
-      padding: 80px 20px; /* Adds space above/below text so it doesn't overlap photo edges */
+      padding: 80px 20px;
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-image.jpg');
-      
-      /* The Magic Fix: 100% auto stops the cropping! */
       background-size: 100% auto; 
       background-position: center top;
-      background-repeat: no-repeat; /* Prevents it from tiling if the screen is really wide */
-      background-attachment: scroll; /* Turned off parallax, as it fights with the new sizing */
-      
-      /* Centers the text vertically inside the new dynamic height */
+      background-repeat: no-repeat;
+      background-attachment: scroll;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -140,7 +137,6 @@
       width: 300px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
-    /* UPDATED: Increased height from 200px to 280px */
     .service-card img {
       width: 100%;
       height: 280px;
@@ -195,8 +191,6 @@
       content: '🐾 ';
     }
 
-     /* Testimonials - UPDATED with background image */
-        /* Testimonials - UPDATED with background image */
     .stories {
       background-image: linear-gradient(rgba(93, 64, 55, 0.5), rgba(93, 64, 55, 0.5)), url('welly-trails.jpg');
       background-size: cover;
@@ -253,16 +247,18 @@
       background-color: var(--forest-green);
       color: var(--soft-white);
       text-align: center;
-      padding: 20px;
+      padding: 25px 20px;
       font-size: 0.9rem;
     }
     .footer-logo {
-      width: 45px;
-      height: 45px;
+      width: 65px;
+      height: 65px;
       border-radius: 50%;
       object-fit: contain;
       background-color: var(--warm-cream);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 3px solid var(--sunny-yellow);
     }
 
     @media (max-width: 768px) {
@@ -275,14 +271,13 @@
         font-size: 0.95rem;
       }
       .nav-logo {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
       }
-      /* UPDATED: Adjusted hero for mobile screens */
       .hero {
         padding: 40px 15px;
         background-attachment: scroll; 
-        min-height: 60vh; /* Slightly shorter on phones so they don't have to scroll forever to see services */
+        min-height: 60vh;
       }
       .hero h1 {
         font-size: 2.2rem;
@@ -316,8 +311,8 @@
         font-size: 2rem;
       }
       .footer-logo {
-        width: 35px;
-        height: 35px;
+        width: 55px;
+        height: 55px;
       }
     }
     </style>
