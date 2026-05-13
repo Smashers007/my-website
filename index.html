@@ -36,12 +36,31 @@
     nav {
       background-color: var(--earth-brown);
       padding: 15px 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: var(--warm-cream);
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     nav a {
       color: var(--soft-white);
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0;
       font-weight: bold;
     }
     nav a:hover {
@@ -237,11 +256,27 @@
       padding: 20px;
       font-size: 0.9rem;
     }
+    .footer-logo {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: var(--warm-cream);
+      margin-bottom: 10px;
+    }
 
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
       nav a {
         margin: 5px 10px;
         font-size: 0.95rem;
+      }
+      .nav-logo {
+        width: 40px;
+        height: 40px;
       }
       /* UPDATED: Adjusted hero for mobile screens */
       .hero {
@@ -280,17 +315,24 @@
       .stories h2 {
         font-size: 2rem;
       }
+      .footer-logo {
+        width: 35px;
+        height: 35px;
+      }
     }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#services">What I Do</a>
-        <a href="#about">About</a>
-        <a href="#stories">Happy Tails</a>
-        <a href="#book">Book Now</a>
+        <img src="logo.jpg" alt="Trails 'n' Tails Logo" class="nav-logo">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#services">What I Do</a>
+            <a href="#about">About</a>
+            <a href="#stories">Happy Tails</a>
+            <a href="#book">Book Now</a>
+        </div>
     </nav>
 
     <section class="hero">
@@ -310,7 +352,7 @@
             <div class="service-card">
                 <img src="leisurely-walks.jpg" alt="Leisurely Walks">
                 <h3>Scenic Leisurely Walks</h3>
-                <p><strong>Duration: 75-90 minutes</strong><br><br>A slow-paced, sensory-rich walk through local bushland or parks. This service is highly recommended for senior dogs, growing puppies, or dogs who thrive on mental stimulation rather than physical exhaustion. I let them set the pace and explore every scent.</p>
+                <p><strong>Distance: 6-8km | Duration: 75-90 minutes</strong><br><br>A slow-paced, sensory-rich walk through local bushland or parks. This service is highly recommended for senior dogs, growing puppies, or dogs who thrive on mental stimulation rather than physical exhaustion. I let them set the pace and explore every scent.</p>
             </div>
             <div class="service-card">
                 <img src="sadie.jpg" alt="Sadie">
@@ -321,7 +363,7 @@
     </section>
 
        <section class="about" id="about">
-        <h2>Who's Walking Your Pup?</h2>
+        <h2>whos walking your dog</h2>
         <div class="about-content">
             <img src="about.me.jpg" alt="Founder of Trails n Tails" class="about-img">
             <div class="about-text">
@@ -356,6 +398,7 @@
     </section>
 
     <footer>
+        <img src="logo.jpg" alt="Trails 'n' Tails Logo" class="footer-logo">
         <p>&copy; 2024 Trails 'n' Tails. All rights reserved. Designed with love for pets.</p>
     </footer>
 
