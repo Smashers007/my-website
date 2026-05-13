@@ -35,19 +35,20 @@
 
     nav {
       background-color: var(--earth-brown);
-      padding: 14px 20px;
+      padding: 12px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: wrap;
     }
-    .nav-brand {
-      font-family: 'Fredoka', sans-serif;
-      font-size: 1.1rem;
-      color: var(--sunny-yellow);
-      letter-spacing: 0.5px;
+    .nav-logo {
+      width: 80px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: contain;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.35);
     }
     .nav-links {
       display: flex;
@@ -80,14 +81,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
-    .hero-logo {
-      width: 160px;
-      height: auto;
-      border-radius: 18px;
-      object-fit: contain;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
     }
     .hero-heading {
       font-family: 'Fredoka', sans-serif;
@@ -268,22 +261,19 @@
 
     @media (max-width: 768px) {
       nav {
-        gap: 4px;
+        gap: 6px;
       }
       nav a {
         margin: 5px 10px;
         font-size: 0.95rem;
       }
-      .nav-brand {
-        font-size: 1rem;
+      .nav-logo {
+        width: 65px;
       }
       .hero {
         padding: 40px 15px;
         background-attachment: scroll; 
         min-height: 60vh;
-      }
-      .hero-logo {
-        width: 130px;
       }
       .hero-heading {
         font-size: 2.2rem;
@@ -325,7 +315,7 @@
 <body>
 
     <nav>
-        <span class="nav-brand">Trails 'n' Tails</span>
+        <img src="logo.jpg" alt="Trails 'n' Tails Logo" class="nav-logo">
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#services">What I Do</a>
@@ -336,7 +326,6 @@
     </nav>
 
     <section class="hero">
-        <img src="logo.jpg" alt="Trails 'n' Tails Logo" class="hero-logo">
         <h1 class="hero-heading">Trails 'n' Tails</h1>
         <p>Adventure-ready dog walking, trail running, and cozy pet sitting.</p>
         <a href="mailto:ashworth530@hotmail.com?subject=Booking%20Inquiry%20from%20Website" class="btn">Book Your Doggie In For a Run!</a>
