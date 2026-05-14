@@ -66,6 +66,20 @@
     nav a:hover {
       color: var(--sunny-yellow);
     }
+    .nav-instagram {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .nav-instagram svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--soft-white);
+      transition: fill 0.2s;
+    }
+    .nav-instagram:hover svg {
+      fill: var(--sunny-yellow);
+    }
 
     .hero {
       color: var(--soft-white);
@@ -218,6 +232,14 @@
       font-style: normal;
       color: var(--sunny-yellow);
     }
+    .references {
+      margin-top: 30px;
+      font-style: normal;
+      font-size: 1rem;
+      color: var(--sunny-yellow);
+      font-weight: bold;
+    }
+
     .final-cta {
       text-align: center;
       padding: 60px 20px;
@@ -242,6 +264,28 @@
       color: var(--forest-green);
       text-decoration: underline;
     }
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--earth-brown);
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 15px;
+    }
+    .instagram-link svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--earth-brown);
+      transition: fill 0.2s;
+    }
+    .instagram-link:hover {
+      color: var(--forest-green);
+      text-decoration: underline;
+    }
+    .instagram-link:hover svg {
+      fill: var(--forest-green);
+    }
 
     footer {
       background-color: var(--forest-green);
@@ -257,6 +301,27 @@
       object-fit: contain;
       margin-bottom: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .footer-instagram {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--soft-white);
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .footer-instagram svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--soft-white);
+      transition: fill 0.2s;
+    }
+    .footer-instagram:hover {
+      color: var(--sunny-yellow);
+    }
+    .footer-instagram:hover svg {
+      fill: var(--sunny-yellow);
     }
 
     @media (max-width: 768px) {
@@ -322,6 +387,10 @@
             <a href="#about">About</a>
             <a href="#stories">Happy Tails</a>
             <a href="#book">Book Now</a>
+            <a href="https://www.instagram.com/YOUR-USERNAME/" target="_blank" rel="noopener noreferrer" class="nav-instagram">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                Instagram
+            </a>
         </div>
     </nav>
 
@@ -377,23 +446,34 @@
         </div>
 
         <div class="story-card">
-            <p>"Our border collie has endless energy and Sam is the only walker who can keep up with him! He comes home completely content after every adventure. The photo updates during walks are such a lovely touch - you can tell Sam genuinely cares about the dogs."</p>
-            <div class="story-author">- Mark & Breeze</div>
+            <p>"Sam was a fantastic housesitter/pet minder. In fact I am sure my dogs want me to go away and Sam to come back. The dogs were really chilled when I came back and displayed no signs of anxiety whatsoever. I would have absolutely no hesitation in recommending Sam for a house sit or to look after your 'darlings'."</p>
+            <div class="story-author">- Dianne</div>
         </div>
+
+        <p class="references">References available on request</p>
     </section>
 
         <section class="final-cta" id="book">
         <h2>Ready to hit the trails?</h2>
         <div class="contact-info">
             <p><strong>Serving:</strong> Wellington & The Hutt Valley</p>
-            <p><strong>Call/Text:</strong> <a href="tel:5551234567">(555) 123-4567</a> | <strong>Email:</strong> <a href="mailto:ashworth530@hotmail.com">ashworth530@hotmail.com</a></p>
+            <p><strong>Call/Text:</strong> <a href="tel:02102287917">021 022 87917</a> | <strong>Email:</strong> <a href="mailto:ashworth530@hotmail.com">ashworth530@hotmail.com</a></p>
         </div>
-        <p>Spaces fill up fast. Book your dog's next adventure today!</p>
+        <a href="https://www.instagram.com/YOUR-USERNAME/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Follow us on Instagram
+        </a>
+        <p style="margin-top: 20px;">Spaces fill up fast. Book your dog's next adventure today!</p>
         <a href="mailto:ashworth530@hotmail.com?subject=Booking%20Inquiry%20from%20Website" class="btn">Book Your Doggie In For a Run!</a>
     </section>
 
     <footer>
         <img src="logo.jpg" alt="Trails 'n' Tails Logo" class="footer-logo">
+        <br>
+        <a href="https://www.instagram.com/YOUR-USERNAME/" target="_blank" rel="noopener noreferrer" class="footer-instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            @YOUR-USERNAME
+        </a>
         <p>&copy; 2024 Trails 'n' Tails. All rights reserved. Designed with love for pets.</p>
     </footer>
 
